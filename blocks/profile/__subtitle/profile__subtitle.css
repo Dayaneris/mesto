@@ -13,9 +13,11 @@
 
 @media (max-width: 934px) {
     .profile__subtitle {
+        align-self: center;
         font-size: 14px;
         line-height: 17px;
         padding-top: 14px;
         max-width: 250px;
+        margin-bottom: 36px;
     }
 }
