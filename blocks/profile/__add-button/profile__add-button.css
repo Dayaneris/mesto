@@ -2,7 +2,7 @@
     min-width: 150px;
     min-height: 50px;
     border: 2px solid #FFFFFF;
-    background-image: url(../../../images/add-button.svg);
+    background-image: url(../../../images/plus.svg);
     box-sizing: border-box;
     background-repeat: no-repeat;
     background-position: center;
@@ -16,9 +16,8 @@
     opacity: 0.6;
 }
 
-@media (max-width: 934px) {
+@media (max-width: 321px) {
     .profile__add-button {
-        min-width: calc(100% - 38px);
-        background-size: 16px;
+        width: 282px;
     }
 }

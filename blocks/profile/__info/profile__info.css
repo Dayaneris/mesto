@@ -4,9 +4,15 @@
     flex-direction: column;
     align-self: center;
 }
-
-@media (max-width: 767px) {
+@media screen and (min-width: 321px) {
     .profile__info {
         max-width: 282px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .profile__info {
+        /*margin: 0 30px;*/
+        max-width: 336px;
     }
 }
