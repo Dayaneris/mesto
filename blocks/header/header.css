@@ -1,8 +1,18 @@
 .header {
+    /*margin: 0 auto;*/
+    /*padding-top: 45px;*/
+    /*padding-bottom: 41px;*/
+    /*margin: auto;*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    padding: 45px 0;
     max-width: 880px;
-    min-height: 74px;
-    margin: 0 auto;
-    padding-top: 45px;
-    padding-bottom: 41px;
-    /*border-bottom: 1px solid rgba(54, 54, 54, 0.7);*/
+    border-bottom: 1px solid rgba(54, 54, 54, 0.7);
+}
+
+@media (max-width: 500px) {
+    .header {
+        min-height: 55px;
+    }
 }
