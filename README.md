@@ -10,7 +10,7 @@
 * Nested БЭМ
 
 **GitHub Pages**
-* [Ссылка на макет GitHub Pages]()
+* [Ссылка на макет GitHub Pages](https://dayaneris.github.io/mesto/index.html)
 
 **Figma**
 

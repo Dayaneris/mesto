@@ -5,15 +5,17 @@
     padding: 66px 762px 60px 200px;
 }
 
-@media (max-width: 1023px) {
-    .footer {
-        max-width: 318px;
+@media (max-width: 1024px) {
+    .footer__copyright {
+        /*max-width: 318px;*/
+        width: 100%;
     }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .footer {
-        max-width: 282px;
+        /*max-width: 282px;*/
+        width: 100%;
         padding: 48px 0 36px;
     }
 }
