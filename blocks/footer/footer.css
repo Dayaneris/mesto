@@ -1,21 +1,19 @@
 .footer {
-    max-width: 318px;
-    /*max-height: 18px;*/
-    margin: 0 auto;
-    padding: 66px 762px 60px 200px;
+    max-width: 880px;
+    margin: auto;
+    padding-bottom: 60px;
 }
 
-@media (max-width: 1024px) {
-    .footer__copyright {
-        /*max-width: 318px;*/
-        width: 100%;
+@media (max-width: 768px) {
+    .footer {
+        padding-bottom: 36px;
+        padding-left: 90px;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 320px) {
     .footer {
-        /*max-width: 282px;*/
-        width: 100%;
-        padding: 48px 0 36px;
+        padding-bottom: 36px;
+        padding-left: 19px;
     }
 }
