@@ -4,8 +4,8 @@ const profileEditPopup = document.querySelector('.popup_profile-edit');
 const profileEditPopupContainer = profileEditPopup.querySelector('.popup__container');
 const closeEditProfilePopupButton = profileEditPopup.querySelector('.popup__close-button')
 
-const nameInput = document.querySelector('input[name="name"]');
-const jobInput = document.querySelector('input[name="job"]');
+const nameInput = profileEditPopup.querySelector('input[name="profileName"]');
+const jobInput = profileEditPopup.querySelector('input[name="profileJob"]');
 const title = document.querySelector('.profile__title');
 const subtitle = document.querySelector('.profile__subtitle');
 
@@ -17,6 +17,9 @@ const closeAddCardPopupButton = addCardPopup.querySelector('.popup__close-button
 
 const cardTemplate = document.querySelector('#card-template');
 const cardContainer = document.querySelector('.elements')
+
+const cardNameInput = addCardPopup.querySelector('input[name="cardName"]');
+const cardUrlInput = addCardPopup.querySelector('input[name="cardUrl"]');
 
 const initialCards = [
     {
@@ -68,7 +71,15 @@ function submitEditProfileHandler(event) {
 
 function submitNewCardHandler(event) {
     event.preventDefault();
+    const newCard = createCard(cardNameInput.value, cardUrlInput.value);
+    cardContainer.prepend(newCard)
     closePopup(addCardPopup)
+    resetCardPopupInputFields()
+}
+
+function resetCardPopupInputFields() {
+    cardNameInput.value = ''
+    cardUrlInput.value = ''
 }
 
 //create single card with given name and link
