@@ -1,8 +1,8 @@
 // Edit profile
 const profileEditPopupButton = document.querySelector('.profile__edit-button');
 const profileEditPopup = document.querySelector('.popup_profile-edit');
-const profileEditPopupContainer = document.querySelector('.popup__container_profile-edit');
-const closeEditProfilePopupButton = document.querySelector('.popup__close-button_profile-edit')
+const profileEditPopupContainer = profileEditPopup.querySelector('.popup__container');
+const closeEditProfilePopupButton = profileEditPopup.querySelector('.popup__close-button')
 
 const nameInput = document.querySelector('input[name="name"]');
 const jobInput = document.querySelector('input[name="job"]');
@@ -12,8 +12,8 @@ const subtitle = document.querySelector('.profile__subtitle');
 // Add new card
 const addNewCardPopupButton = document.querySelector('.profile__add-button');
 const addCardPopup = document.querySelector('.popup_add-card');
-const addCardPopupContainer = document.querySelector('.popup__container_add-card');
-const closeAddCardPopupButton = document.querySelector('.popup__close-button_add-card')
+const addCardPopupContainer = addCardPopup.querySelector('.popup__container');
+const closeAddCardPopupButton = addCardPopup.querySelector('.popup__close-button')
 
 const cardTemplate = document.querySelector('#card-template');
 const cardContainer = document.querySelector('.elements')
