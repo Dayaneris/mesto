@@ -13,7 +13,6 @@
         grid-template-columns: repeat(2, 282px);
         grid-template-rows: repeat(1, 361px);
     }
-
 }
 
 @media (max-width: 765px) {
