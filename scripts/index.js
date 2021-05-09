@@ -88,15 +88,19 @@ function createCard(name, imageLink) {
     card.querySelector('.element__title').textContent = name;
     card.querySelector('.element__image').alt = name;
     card.querySelector('.element__image').src = imageLink;
-    initLikeButton(card)
+    initLikeButton(card);
+    initTrashButton(card);
     return card;
 }
 
 function initLikeButton(card) {
     const likeButton = card.querySelector('.element__heart');
-    likeButton.addEventListener('click', function () {
-        likeButton.classList.toggle('element__heart_pressed');
-    });
+    likeButton.addEventListener('click', () => likeButton.classList.toggle('element__heart_pressed'));
+}
+
+function initTrashButton(card) {
+    const trashButton = card.querySelector('.element__trash');
+    trashButton.addEventListener('click', () => trashButton.closest('.element').remove());
 }
 
 //create cards grid with data from initialCards array
