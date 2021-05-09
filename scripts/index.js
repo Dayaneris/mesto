@@ -48,6 +48,10 @@ const initialCards = [
     }
 ];
 
+// Image popup
+const imagePopup = document.querySelector('.popup_image');
+const closeImagePopupButton = imagePopup.querySelector('.popup__close-button')
+
 function openPopup(popup) {
     popup.classList.add('popup_opened');
 }
@@ -83,13 +87,14 @@ function resetCardPopupInputFields() {
 }
 
 //create single card with given name and link
-function createCard(name, imageLink) {
+function createCard(name, imageUrl) {
     const card = cardTemplate.content.querySelector('.element').cloneNode(true)
     card.querySelector('.element__title').textContent = name;
     card.querySelector('.element__image').alt = name;
-    card.querySelector('.element__image').src = imageLink;
+    card.querySelector('.element__image').src = imageUrl;
     initLikeButton(card);
     initTrashButton(card);
+    initImagePopupButton(card, name, imageUrl)
     return card;
 }
 
@@ -101,6 +106,16 @@ function initLikeButton(card) {
 function initTrashButton(card) {
     const trashButton = card.querySelector('.element__trash');
     trashButton.addEventListener('click', () => trashButton.closest('.element').remove());
+}
+
+function initImagePopupButton(card, imageName, imageUrl) {
+    const imageButton = card.querySelector('.element__image');
+    imageButton.addEventListener('click', () => {
+        openPopup(imagePopup);
+        imagePopup.querySelector('.popup__image-title').textContent = imageName
+        imagePopup.querySelector('.popup__image').src = imageUrl
+        imagePopup.querySelector('.popup__image').alt = imageName
+    });
 }
 
 //create cards grid with data from initialCards array
@@ -117,3 +132,5 @@ closeEditProfilePopupButton.addEventListener('click', () => closePopup(profileEd
 addNewCardPopupButton.addEventListener('click', () => openPopup(addCardPopup));
 addCardPopupContainer.addEventListener('submit', submitNewCardHandler)
 closeAddCardPopupButton.addEventListener('click', () => closePopup(addCardPopup));
+
+closeImagePopupButton.addEventListener('click', () => closePopup(imagePopup));
