@@ -88,7 +88,15 @@ function createCard(name, imageLink) {
     card.querySelector('.element__title').textContent = name;
     card.querySelector('.element__image').alt = name;
     card.querySelector('.element__image').src = imageLink;
+    initLikeButton(card)
     return card;
+}
+
+function initLikeButton(card) {
+    const likeButton = card.querySelector('.element__heart');
+    likeButton.addEventListener('click', function () {
+        likeButton.classList.toggle('element__heart_pressed');
+    });
 }
 
 //create cards grid with data from initialCards array
