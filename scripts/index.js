@@ -48,16 +48,36 @@ const initialCards = [
     }
 ];
 
+//overlay
+const popupList = Array.from(document.querySelectorAll('.popup'));
+
+//closing a popup by click on the overlay
+function handleOverlayClick(event, popup) {
+    if (event.target === event.currentTarget) {
+        closePopup(popup);
+    }
+}
+
+//closing a popup by click on the escape
+function closePopupEscape(event) {
+    if (event.key === 'Escape') {
+        const openedPopup = document.querySelector('.popup_opened');
+        closePopup(openedPopup);
+    }
+}
+
 // Image popup
 const imagePopup = document.querySelector('.popup_image');
 const closeImagePopupButton = imagePopup.querySelector('.popup__close-button')
 
 function openPopup(popup) {
     popup.classList.add('popup_opened');
+    document.addEventListener('keydown', closePopupEscape);
 }
 
 function closePopup(popup) {
     popup.classList.remove('popup_opened');
+    document.removeEventListener('keydown', closePopupEscape);
 }
 
 function openEditProfileHandler() {
@@ -124,6 +144,11 @@ initialCards.forEach(function (element) {
         cardContainer.append(createdCard)
     }
 )
+
+popupList.forEach((popupElement) => {
+    popupElement.addEventListener('click', (event) => handleOverlayClick(event, popupElement));
+});
+
 
 profileEditPopupButton.addEventListener('click', openEditProfileHandler);
 profileEditPopupContainer.addEventListener('submit', submitEditProfileHandler);
