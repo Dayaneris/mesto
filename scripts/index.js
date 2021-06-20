@@ -21,6 +21,15 @@ const cardContainer = document.querySelector('.elements')
 const cardNameInput = addCardPopup.querySelector('input[name="cardName"]');
 const cardUrlInput = addCardPopup.querySelector('input[name="cardUrl"]');
 
+const config = {
+    formSelector: '.popup__form',
+    inputSelector: '.popup__input',
+    submitButtonSelector: '.form__submit-button',
+    inactiveButtonClass: 'form__submit-button_disabled',
+    inputErrorClass: 'popup__form-input-error',
+    errorClass: 'popup__form-input-error_active'
+}
+
 const initialCards = [
     {
         name: 'Архыз',
@@ -159,3 +168,5 @@ addCardPopupContainer.addEventListener('submit', submitNewCardHandler)
 closeAddCardPopupButton.addEventListener('click', () => closePopup(addCardPopup));
 
 closeImagePopupButton.addEventListener('click', () => closePopup(imagePopup));
+
+enableValidation(config);

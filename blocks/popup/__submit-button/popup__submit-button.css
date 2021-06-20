@@ -7,12 +7,23 @@
     align-self: center;
     font-size: 18px;
     line-height: 1.2;
+    border-radius: 2px;
     font-weight: normal;
     cursor: pointer;
 }
 
 .popup__submit-button:hover {
     background-color: rgba(0, 0, 0, .8);
+}
+
+.popup__submit-button:disabled {
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    color: #000000;
+    opacity: .2;
+    cursor: none;
+    box-sizing: border-box;
+    border-radius: 2px;
 }
 
 @media (max-width: 768px) {
