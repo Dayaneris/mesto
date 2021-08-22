@@ -7,3 +7,12 @@
     display: flex;
     height: 12px;
 }
+
+.popup__input-error-border {
+    border-bottom-color: red;
+    border-bottom-width: 2px;
+}
+
+.popup__input-message_error_visible {
+    opacity: 1;
+}

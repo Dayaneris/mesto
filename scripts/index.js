@@ -163,9 +163,9 @@ const validationConfig = {
     formSelector: '.popup__form',
     inputSelector: '.popup__input',
     // submitButtonSelector: '.popup__submit-button',
-    // inactiveButtonClass: 'popup__submit-button_disabled', //add css
-    inputErrorClass: 'popup__input-error', //add css
-    messageErrorClass: 'popup__input-message_error_visible' // add css
+    // inactiveButtonClass: 'popup__submit-button_disabled',
+    inputErrorClass: 'popup__input-error-border',
+    messageErrorClass: 'popup__input-message_error_visible'
 }
 
 enableValidation(validationConfig);
