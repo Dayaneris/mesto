@@ -162,8 +162,8 @@ closeImagePopupButton.addEventListener('click', () => closePopup(imagePopup));
 const validationConfig = {
     formSelector: '.popup__form',
     inputSelector: '.popup__input',
-    // submitButtonSelector: '.popup__submit-button',
-    // inactiveButtonClass: 'popup__submit-button_disabled',
+    submitButtonSelector: '.popup__submit-button',
+    inactiveButtonClass: 'popup__submit-button_disabled',
     inputErrorClass: 'popup__input-error',
     messageErrorClass: 'popup__input-message_error_active'
 }

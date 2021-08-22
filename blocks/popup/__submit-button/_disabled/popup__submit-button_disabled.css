@@ -2,8 +2,10 @@
     background: #ffffff;
     border: 1px solid #000000;
     color: #000000;
-    cursor: none;
+    cursor: not-allowed;
     box-sizing: border-box;
     border-radius: 2px;
     opacity: 0.2;
+    pointer-events: none;
+    user-select: none;
 }
