@@ -13,3 +13,12 @@
     opacity: 0;
     transition: visibility 0.4s, opacity 0.4s linear;
 }
+
+.popup__input-error {
+    border-bottom-color: red;
+    border-bottom-width: 5px;
+}
+
+.popup__input-message_error_visible {
+    opacity: 1;
+}
