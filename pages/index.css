@@ -41,5 +41,6 @@
 
 @import url(../blocks/popup/__submit-button/_disabled/popup__submit-button_disabled.css);
 @import url(../blocks/popup/__submit-button/_disabled/popup__submit-button_disabled.css);
-@import url(../blocks/popup/__form-input-error/popup__form-input-error.css);
+@import url(../blocks/popup/__form-input-error/popup__input-message_error.css);
+@import url(../blocks/popup/__input-error/popup__input-error.css);
 @import url(../blocks/popup/__input/_name/_error/popup__input_name_error.css);
