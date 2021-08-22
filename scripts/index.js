@@ -164,8 +164,8 @@ const validationConfig = {
     inputSelector: '.popup__input',
     // submitButtonSelector: '.popup__submit-button',
     // inactiveButtonClass: 'popup__submit-button_disabled',
-    inputErrorClass: 'popup__input-error-border',
-    messageErrorClass: 'popup__input-message_error_visible'
+    inputErrorClass: 'popup__input-error',
+    messageErrorClass: 'popup__input-message_error_active'
 }
 
 enableValidation(validationConfig);

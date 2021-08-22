@@ -1,18 +1,27 @@
-.popup__form-input-error {
+.popup__input-message_error {
+    display: none;
     color: #ff0000;
     font-size: 12px;
     font-style: normal;
     font-weight: normal;
-    padding: 5px 0 13px 0;
-    display: flex;
+    margin: 5px 0 13px;
     height: 12px;
 }
 
-.popup__input-error-border {
-    border-bottom-color: red;
-    border-bottom-width: 2px;
+.popup__input-message_error_active {
+    display: flex;
 }
 
-.popup__input-message_error_visible {
-    opacity: 1;
+.popup__input-message_error_active:last-of-type {
+    margin-bottom: 31px;
+}
+
+.popup__input-error {
+    margin-bottom: 0;
+    border-bottom-color: red;
+    border-bottom-width: 1px;
+}
+
+.popup__input-error:last-of-type {
+    margin-bottom: 0;
 }
