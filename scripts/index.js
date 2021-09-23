@@ -1,3 +1,5 @@
+import { FormValidator } from './FormValidator.js'
+
 // Edit profile
 const profileEditPopupButton = document.querySelector('.profile__edit-button');
 const profileEditPopup = document.querySelector('.popup_profile-edit');
@@ -168,4 +170,10 @@ const validationConfig = {
     messageErrorClass: 'popup__input-message_error_active'
 }
 
-enableValidation(validationConfig);
+const formAddCard = document.querySelector('.popup_form-add-card');
+const formAddCardValidator = new FormValidator(validationConfig, formAddCard)
+formAddCardValidator.enableValidation();
+
+const formProfileEdit = document.querySelector('.popup_form-profile-edit');
+const formProfileEditValidator = new FormValidator(validationConfig, formProfileEdit)
+formProfileEditValidator.enableValidation();
