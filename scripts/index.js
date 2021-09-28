@@ -1,4 +1,5 @@
-import { FormValidator } from './FormValidator.js'
+import {FormValidator} from './FormValidator.js'
+import {Card} from "./Card.js";
 
 // Edit profile
 const profileEditPopupButton = document.querySelector('.profile__edit-button');
@@ -110,28 +111,13 @@ function resetCardPopupInputFields() {
 
 //create single card with given name and link
 function createCard(name, imageUrl) {
-    const card = cardTemplate.content.querySelector('.element').cloneNode(true)
-    card.querySelector('.element__title').textContent = name;
-    card.querySelector('.element__image').alt = name;
-    card.querySelector('.element__image').src = imageUrl;
-    initLikeButton(card);
-    initTrashButton(card);
-    initImagePopupButton(card, name, imageUrl)
-    return card;
+    const cardElement = new Card(cardTemplate, name, imageUrl).getElement()
+    initImagePopupButton(cardElement, name, imageUrl)
+    return cardElement;
 }
 
-function initLikeButton(card) {
-    const likeButton = card.querySelector('.element__heart');
-    likeButton.addEventListener('click', () => likeButton.classList.toggle('element__heart_pressed'));
-}
-
-function initTrashButton(card) {
-    const trashButton = card.querySelector('.element__trash');
-    trashButton.addEventListener('click', () => trashButton.closest('.element').remove());
-}
-
-function initImagePopupButton(card, imageName, imageUrl) {
-    const imageButton = card.querySelector('.element__image');
+function initImagePopupButton(cardElement, imageName, imageUrl) {
+    const imageButton = cardElement.querySelector('.element__image');
     imageButton.addEventListener('click', () => {
         openPopup(imagePopup);
         imagePopup.querySelector('.popup__image-title').textContent = imageName
