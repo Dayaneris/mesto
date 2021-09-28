@@ -156,10 +156,10 @@ const validationConfig = {
     messageErrorClass: 'popup__input-message_error_active'
 }
 
-const formAddCard = document.querySelector('.popup_form-add-card');
+const formAddCard = document.querySelector('.popup__form-add-card');
 const formAddCardValidator = new FormValidator(validationConfig, formAddCard)
 formAddCardValidator.enableValidation();
 
-const formProfileEdit = document.querySelector('.popup_form-profile-edit');
+const formProfileEdit = document.querySelector('.popup__form-profile-edit');
 const formProfileEditValidator = new FormValidator(validationConfig, formProfileEdit)
 formProfileEditValidator.enableValidation();
