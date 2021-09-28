@@ -153,7 +153,7 @@ const validationConfig = {
     submitButtonSelector: '.popup__submit-button',
     inactiveButtonClass: 'popup__submit-button_disabled',
     inputErrorClass: 'popup__input-error',
-    messageErrorClass: 'popup__input-message_error_active'
+    messageErrorClass: 'popup__message-error_active'
 }
 
 const formAddCard = document.querySelector('.popup__form-add-card');

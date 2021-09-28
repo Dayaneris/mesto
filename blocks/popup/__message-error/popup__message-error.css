@@ -1,4 +1,4 @@
-.popup__input-message_error {
+.popup__message-error {
     display: none;
     color: #ff0000;
     font-size: 12px;
@@ -8,11 +8,11 @@
     height: 12px;
 }
 
-.popup__input-message_error_active {
+.popup__message-error_active {
     display: flex;
 }
 
-.popup__input-message_error_active:last-of-type {
+.popup__message-error_active:last-of-type {
     margin-bottom: 31px;
 }
 
