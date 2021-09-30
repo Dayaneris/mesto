@@ -101,7 +101,8 @@ function submitNewCardHandler(event) {
     const newCard = createCard(cardNameInput.value, cardUrlInput.value);
     cardContainer.prepend(newCard)
     closePopup(addCardPopup)
-    resetCardPopupInputFields()
+    resetCardPopupInputFields();
+    formAddCardValidator.resetValidation();
 }
 
 function resetCardPopupInputFields() {
