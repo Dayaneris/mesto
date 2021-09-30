@@ -111,19 +111,14 @@ function resetCardPopupInputFields() {
 
 //create single card with given name and link
 function createCard(name, imageUrl) {
-    const cardElement = new Card(name, imageUrl).getElement()
-    initImagePopupButton(cardElement, name, imageUrl)
-    return cardElement;
+    return new Card(name, imageUrl, initImagePopupButton).getElement()
 }
 
 function initImagePopupButton(cardElement, imageName, imageUrl) {
-    const imageButton = cardElement.querySelector('.element__image');
-    imageButton.addEventListener('click', () => {
-        openPopup(imagePopup);
-        imagePopup.querySelector('.popup__image-title').textContent = imageName
-        imagePopup.querySelector('.popup__image').src = imageUrl
-        imagePopup.querySelector('.popup__image').alt = imageName
-    });
+    openPopup(imagePopup);
+    imagePopup.querySelector('.popup__image-title').textContent = imageName
+    imagePopup.querySelector('.popup__image').src = imageUrl
+    imagePopup.querySelector('.popup__image').alt = imageName
 }
 
 //create cards grid with data from initialCards array
