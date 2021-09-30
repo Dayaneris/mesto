@@ -111,7 +111,7 @@ function resetCardPopupInputFields() {
 
 //create single card with given name and link
 function createCard(name, imageUrl) {
-    const cardElement = new Card(cardTemplate, name, imageUrl).getElement()
+    const cardElement = new Card(name, imageUrl).getElement()
     initImagePopupButton(cardElement, name, imageUrl)
     return cardElement;
 }

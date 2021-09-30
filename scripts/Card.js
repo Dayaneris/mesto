@@ -1,18 +1,22 @@
 export class Card {
 
-    constructor(cardTemplate, name, link) {
+    constructor(name, link) {
         this._name = name;
         this._link = link;
-        this._element = cardTemplate.content.querySelector('.element').cloneNode(true);
+    }
+
+    getElement() {
+        this._element = this._getTemplate().content.querySelector('.element').cloneNode(true);
         this._element.querySelector('.element__title').textContent = this._name;
         this._element.querySelector('.element__image').alt = this._name;
         this._element.querySelector('.element__image').src = this._link;
         this._initLikeButton();
         this._initTrashButton();
+        return this._element;
     }
 
-    getElement = () => {
-        return this._element;
+    _getTemplate() {
+        return document.querySelector('#card-template');
     }
 
     _initLikeButton() {
