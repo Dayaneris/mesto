@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pages/index.css">
+<!--    <link rel="stylesheet" href="../pages/index.css">-->
     <title>Место</title>
 </head>
 
@@ -11,18 +11,19 @@
 
 <div class="page">
     <header class="header">
-        <img class="header__logo" src="images/logo-mesto.svg" alt="Логотип Место">
+        <img class="header__logo" src="<%=require('../images/logo-mesto.svg')%>" alt="Логотип Место">
+
     </header>
 
     <main class="content">
 
         <section class="profile">
             <div class="profile__user-info">
-                <img class="profile__avatar" src="images/d_avatar1.jpg" alt="Аватарка пользователя">
+                <img class="profile__avatar" src="<%=require('../images/d_avatar1.jpg')%>" alt="Аватарка пользователя">
 
                 <div class="profile__info-block">
                     <div class="profile__info">
-                        <h1 class="profile__title">Dayana S</h1>
+                        <h1 class="profile__title">Dayana Sar</h1>
                         <p class="profile__subtitle">Web developer</p>
                     </div>
                     <button type="button" class="profile__edit-button"></button>
@@ -102,7 +103,7 @@
     </footer>
 </div>
 
-<script type="module" src="./scripts/index.js"></script>
+<script type="module" src="index.js"></script>
 
 </body>
 </html>

@@ -1,5 +1,6 @@
-import {FormValidator} from './FormValidator.js'
-import {Card} from "./Card.js";
+import {FormValidator} from './scripts/FormValidator.js'
+import {Card} from "./scripts/Card.js";
+import './pages/index.css';
 
 // Edit profile
 const profileEditPopupButton = document.querySelector('.profile__edit-button');
